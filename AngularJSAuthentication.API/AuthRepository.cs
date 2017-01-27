@@ -19,6 +19,10 @@ namespace AngularJSAuthentication.API
 
         private UserManager<IdentityUser> _userManager;
 
+       
+        public int PDFamilyID { get; set; }
+        public virtual List<PlayDateEvent> playDateEvents { get; set; }
+
         public AuthRepository()
         {
             _ctx = new AuthContext();

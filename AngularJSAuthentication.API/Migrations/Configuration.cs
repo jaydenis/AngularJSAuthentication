@@ -11,7 +11,8 @@ namespace AngularJSAuthentication.API.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationDataLossAllowed = true;
         }
 
         protected override void Seed(AngularJSAuthentication.API.AuthContext context)
@@ -32,16 +33,25 @@ namespace AngularJSAuthentication.API.Migrations
             {
                 new Client
                 { Id = "ngAuthApp", 
-                    Secret= Helper.GetHash("abc@123"), 
+                    Secret= Helper.GetHash("Kn0wl#dg#"), 
                     Name="AngularJS front-end Application", 
                     ApplicationType =  Models.ApplicationTypes.JavaScript, 
                     Active = true, 
                     RefreshTokenLifeTime = 7200, 
-                    AllowedOrigin = "http://ngauthenticationweb.azurewebsites.net"
+                    AllowedOrigin = "http://localhost:26264/"
+                },
+                 new Client
+                { Id = "mobileApp",
+                    Secret= Helper.GetHash("N0v#m3#r"),
+                    Name="Cordova front-end Application",
+                    ApplicationType =  Models.ApplicationTypes.JavaScript,
+                    Active = true,
+                    RefreshTokenLifeTime = 7200,
+                    AllowedOrigin = "hhttps://myplaydate.azurewebsites.net"
                 },
                 new Client
                 { Id = "consoleApp", 
-                    Secret=Helper.GetHash("123@abc"), 
+                    Secret=Helper.GetHash("2nt2rpr!s2"), 
                     Name="Console Application", 
                     ApplicationType =Models.ApplicationTypes.NativeConfidential, 
                     Active = true, 

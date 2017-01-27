@@ -18,6 +18,11 @@ namespace AngularJSAuthentication.API
 
         public DbSet<Client> Clients { get; set; }
         public DbSet<RefreshToken> RefreshTokens { get; set; }
+        public DbSet<PlayDateEvent> PlayDateEvents { get; set; }
+        public DbSet<PlayDateGuestList> PlayDateGuestLists { get; set; }
+        public DbSet<PlayDateGuestItem> PlayDateGuestItems { get; set; }
+        public DbSet<PlayDateKid> PlayDateKids { get; set; }
+        public DbSet<PlayDateFamily> PlayDateFamlies { get; set; }
     }
 
 }
